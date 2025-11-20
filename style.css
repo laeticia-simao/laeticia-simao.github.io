@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("SpaceGrotesk-Bold.woff2") format("woff2");
+}
+*{
+    box-sizing: border-box;
+}
+body{
+
+background-color: #ffffff;
+color: rgb(246, 243, 243);
+line-height: 1.5;
+font-family: "Space Grotesk", sans-serif;
+}
+
+h1{
+    margin : 0px;
+}
+
+p{
+    max-width: 600 px;
+}
+.projet{
+    background-color: greenyellow;
+   
+}
+
+h1 {
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height : auto;
+    display : block;
+}
+/* header */
+
+.header{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between ;
+    align-items: center;
+    color: #ff0095;
+    
+   
+}
+
+.header a{
+    text-decoration: none;
+    background-color: #2f00ff;
+    color: currentColor;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    gap: 24px; 
+}
+
+.nav a{
+    text-decoration: none;
+    color: currentColor;
+    font-size: 30px;
+    background: #ff006aff;
+   
+}
+
+.nav a span{
+    display: block;
+    padding: 5px;
+}
+/**.nav a{
+    text-decoration: none;
+    color: currentColor;
+    font-size: 48px;
+    border-bottom: 1px solid black;
+}
+*/
+/**
+page projet
+*/
+
+.projet h1{
+    color: aliceblue;
+    font-size: 16px;
+}
+.projet P {
+    font-size: 12px;
+    color: #2f00ff;
+    
+ 
+}
