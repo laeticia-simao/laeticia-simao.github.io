@@ -1,94 +1,187 @@
+/* --- FONTS --- */
 @font-face {
-    font-family: "Space Grotesk";
-    src: url("SpaceGrotesk-Bold.woff2") format("woff2");
-}
-*{
-    box-sizing: border-box;
-}
-body{
-
-background-color: #ffffff;
-color: rgb(246, 243, 243);
-line-height: 1.5;
-font-family: "Space Grotesk", sans-serif;
+    font-family: PPNeueMontreal;
+    src: url(typo/PPNeueMontreal-Light.woff2) format("woff2");
 }
 
-h1{
-    margin : 0px;
+@font-face {
+    font-family: PPNeueMontreal-Book;
+    src: url(typo/PPNeueMontreal-Book.woff2) format("woff2");
 }
 
-p{
-    max-width: 600 px;
-}
-.projet{
-    background-color: greenyellow;
-   
+@font-face {
+    font-family: PPNeueMontreal-Thin;
+    src: url(typo/) format("woff2");
 }
 
-h1 {
+@font-face {
+    font-family: PPNeueMontreal-Regular;
+    src: url(typo/PPNeueMontreal-Regular.woff2) format("woff2");
+}
+
+
+@font-face {
+    font-family: PPNeueMontreal-BookSqueezed;
+    src: url(typo/OTNeueMontreal-BookSqueezed.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: PPNeueMontreal-ThinUltraSqueezed;
+    src: url(typo/OTNeueMontreal-ThinUltraSqueezed.woff2) format("woff2");
+}
+
+/* --- STRUCTURE GLOBALE --- */
+body {
     margin: 0;
+    padding: 0;
+    font-family: PPNeueMontreal;
+    background-color: #ffffff;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main";
 }
 
-img{
+
+video{
     max-width: 100%;
-    height : auto;
-    display : block;
+    height: auto;
 }
-/* header */
-
-.header{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between ;
+/* --- HEADER --- */
+nav {
+    grid-area: navbar;
+    background-color: #e7e5e5;
+    color:#ff0496;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: #ff0095;
-    
-   
+    padding: 0 15px;
+  font-family: PPNeueMontreal-Regular;
+    font-size: 20px;
 }
 
-.header a{
+nav a {
+    color :#ff0496;
     text-decoration: none;
-    background-color: #2f00ff;
-    color: currentColor;
 }
 
-.nav{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    justify-content: center;
-    gap: 24px; 
-}
+/* --- SIDEBAR --- */
+aside {
+    grid-area: sidebar;
+    background-color: #e7e5e5;
+    color:#ff0496;
 
-.nav a{
-    text-decoration: none;
-    color: currentColor;
-    font-size: 30px;
-    background: #ff006aff;
-   
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-.nav a span{
-    display: block;
-    padding: 5px;
-}
-/**.nav a{
-    text-decoration: none;
-    color: currentColor;
-    font-size: 48px;
-    border-bottom: 1px solid black;
-}
-*/
-/**
-page projet
-*/
-
-.projet h1{
-    color: aliceblue;
+    padding: 10px 12px;
+    padding-top: 10px;
+     font-family: PPNeueMontreal-Regular;
     font-size: 16px;
 }
-.projet P {
-    font-size: 12px;
-    color: #2f00ff;
+
+.description {
+    line-height: 1.4;
+}
+
+.enbas a {
+    color :#ff0496;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.enbas a:hover {
+    text-decoration: underline;
+}
+
+/* --- MAIN --- */
+main {
+    grid-area: main;
+    padding: 10px;
+    background-image: url("img/glitch_typeshit.png");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+/* Grille d'images */
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.navigation img {
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Textes divers */
+h1 {
+    color: #ff0496;
+    display: inline;
+    padding: 0 0.1em;
+    font-size: 30px;
+}
+
+.soustitre {
+    background-color: #ff0496;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.soustitrage_page {
+    background-color: #ff0496;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+p {
+    font-family: PPNeueMontreal-Thin;
+    color: #ff0496;
+    max-width: 400px;
+    font-size: 14px;
+}
+
+.projet1 {
     
- 
+    gap: 10px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.banniere img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banniere {
+ display: grid;
+ grid-template-rows: auto;
+ gap: 5px;
+    max-width: 1000px; /* ou la taille que tu veux */
+    margin-bottom: 20px;
+}
+
+body.no-bg main {
+    background-image: none !important;
+}
+
+.apropos{
+
+    font-family: PPNeueMontreal-BookSqueezed;  
+    max-width: 800px;
+    font-size: 38px;
+    color: #ff0496;
 }
